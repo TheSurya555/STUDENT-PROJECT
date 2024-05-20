@@ -50,3 +50,15 @@
   object-fit:cover;
   border-radius: 50%;
 }
+
+.profile_name{
+  font-weight: bold;
+}
+.profile_detailes{
+  font-weight: 500;
+}
+ 
+.profile_detailes span{
+  font-weight: normal;
+  color: #777777;
+}
