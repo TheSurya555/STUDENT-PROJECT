@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta detailes="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings Page</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ff6ad5e464.js" crossorigin="anonymous"></script>
@@ -16,69 +16,199 @@
   <div class="row">
     <div class="col-md-3 sidebar">
       <h3 class="mb-4">Profile</h3>
-      <a href="#" class="active">My info</a>
-      <a href="#">projects / experence</a>
-      <a href="#">Billing & Payments</a>
-      <a href="#">Take your Test</a>
-      <a href="#">Connect With</a>
+      <a href="#" id="myInfoLink" class="active">My Info</a>
+      <a href="#" id="projectsLink">Projects / Experience</a>
+      <a href="#" id="billingLink">Billing & Payments</a>
+      <a href="#" id="testLink">Take your Test</a>
+      <a href="#" id="connectLink">Connect With</a>
     </div>
     <div class="col-md-9 main-content">
-      <h4 class="section-heading">My Info</h4>
-      <p>Student Account</p>
       
-      <div class="card card-custom mb-4">
-        <h5>Account</h5>
-        <div class="d-flex align-items-center">
-          <div class="mr-3 profile">
-            <img src="/assets/alchemyrefiner_alchemymagic_2_78ad3111-a1a3-4ce8-8f9b-ff5c9b293956_0.jpg" alt="Profile" class="">
+      <div id="myInfoSection" class="content-section active">
+        <h4 class="section-heading">My Info</h4>
+        <p>Student Account</p>
+        
+        <div class="card card-custom mb-4">
+          <h5>Account</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/alchemyrefiner_alchemymagic_2_78ad3111-a1a3-4ce8-8f9b-ff5c9b293956_0.jpg" alt="Profile" class="">
+            </div>
+            <div>
+              <p class="mb-1 profile_name">Surya Prasad Sahoo</p>
+              <p class="mb-1 ">Python Developer</p>
+              <small>Email: suryaprasad9@gmail.com</small>
+            </div>
           </div>
-          <div>
-            <p class="mb-1 profile_name">Surya Pasad Sahoo</p>
-            <p class="mb-1 ">Python Developer</p>
-            <small>Email: suryaprasad9@gmail.com</small>
+        </div>
+        
+        <div class="card card-custom mb-4">
+          <h5>Profile details</h5>
+          <div class="d-flex">
+            <div class="mr-3 profile">
+              <img src="/assets/alchemyrefiner_alchemymagic_2_e5784fc4-a8ed-4dfc-ba42-a091b7aa846a_0.jpg" alt="Company" class="">
+            </div>
+            <div>
+              <p class="profile_detailes"> <span>Name :</span> <br> Surya Prasad Sahoo</p>
+              <p class="profile_detailes"> <span>D.O.B :</span> <br> 05 / 04 / 2003</p>
+              <p class="profile_detailes"> <span>Phone :</span> <br> 9999999999</p>
+              <p class="profile_detailes"> <span>Address :</span> <br> 123, XYZ, India</p>
+              <p class="profile_detailes"> <span>Role :</span> <br> Python Developer</p>
+              <p class="profile_detailes"> <span>Experience :</span> <br> 1 Year</p>
+              <p class="profile_detailes"> <span>Skills :</span> <br> Python, Django, Flask</p>
+              <p class="profile_detailes"> <span>Language :</span> <br> Hindi, English</p>
+              <p class="profile_detailes"> <span>Education :</span> <br> B.Tech, Computer Science</p>
+              <p class="profile_detailes"> <span>VAT ID No:</span> <br> 45689*******56</p>
+            </div>
+            <div class="ml-auto">
+              <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-custom mb-4">
+          <h5>Resume</h5>
+          <div class="d-flex">
+            <div>
+              <button type="submit" class="px-3"><span>View Resume</span></button>
+            </div>
+            <div class="ml-auto">
+              <input type="file" id="fileInput" style="display:none;">
+              <button type="uploadButton" id="uploadButton" class="px-3"><span><i class="fa-solid fa-upload"></i></span></button>
+            </div>
           </div>
         </div>
       </div>
       
-      <div class="card card-custom mb-4">
-        <h5>Profile details</h5>
-        <div class="d-flex">
-          <div class="mr-3 profile">
-            <img src="/assets/alchemyrefiner_alchemymagic_2_e5784fc4-a8ed-4dfc-ba42-a091b7aa846a_0.jpg" alt="Company" class="">
-          </div>
-          <div>
-            <p class="profile_detailes"> <span>Name :</span> <br> Surya Prasad Sahoo</p>
-            <p class="profile_detailes"> <span>D.O.B :</span> <br> 05 / 04 / 2003</p>
-            <p class="profile_detailes"> <span>Phone :</span> <br> 9999999999</p>
-            <p class="profile_detailes"> <span>Address :</span> <br> 123, XYZ, India</p>
-            <p class="profile_detailes"> <span>Role :</span> <br> Python Developer</p>
-            <p class="profile_detailes"> <span>Experience :</span> <br> 1 Year</p>
-            <p class="profile_detailes"> <span>Skills :</span> <br> Python, Django, Flask</p>
-            <p class="profile_detailes"> <span>Language :</span> <br> Hindi, English</p>
-            <p class="profile_detailes"> <span>Education :</span> <br> B.Tech, Computer Science</p>
-            <p class="profile_detailes"> <span>VAT ID No:</span> <br> 45689*******56</p>
+      <div id="projectsSection" class="content-section">
+        <h4 class="section-heading">Projects / Experience</h4>
+        <p>Below is a summary of my professional projects and experiences:</p>
 
-          </div>
-          <div class="ml-auto">
-            <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+        <div class="card card-custom mb-4">
+          <h5>Project 1: E-commerce Website</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/a-chic-contemporary-logo-design-for-a-student-hiri-th-nP3_tQ0isSdvjETBCjg-SRT2RGXlSq2Ha3KuTMgLCQ.jpeg" alt="Project 1 Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Role:</strong> Full Stack Developer</p>
+              <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Django, PostgreSQL</p>
+              <p><strong>Description:</strong> Developed a fully functional e-commerce website with features such as product listing, user authentication, shopping cart, and payment integration. Implemented both front-end and back-end functionalities, ensuring a seamless user experience.</p>
+            </div>
           </div>
         </div>
+      
+        <div class="card card-custom mb-4">
+          <h5>Project 2: Social Media Platform</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/a-tastefully-designed-logo-for-the-church-name-ceo-GV3Qm2oOQZq8P56iOmHfSA-9fg6CRdVSLi2qm8fKIDTag.jpeg" alt="Project 2 Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Role:</strong> Back-end Developer</p>
+              <p><strong>Technologies:</strong> Python, Flask, MongoDB</p>
+              <p><strong>Description:</strong> Collaborated on the development of a social media platform, focusing on server-side logic and database management. Designed RESTful APIs for user interaction, real-time messaging, and media sharing. Enhanced database performance and ensured data security.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card card-custom mb-4">
+          <h5>Project 3: Machine Learning Model for Predictive Analytics</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/el-logo-de-automatia-la-innovadora-startup-especia-gkjFy6O-S_2MhMyJ9i_btQ-61EwEfxyRYiLIEA3QthxDg.jpeg" alt="Project 3 Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Role:</strong> Data Scientist</p>
+              <p><strong>Technologies:</strong> Python, TensorFlow, Pandas</p>
+              <p><strong>Description:</strong> Developed a machine learning model to predict customer churn for a telecom company. Analyzed large datasets to identify key indicators, built and trained the model using TensorFlow, and achieved a high accuracy rate. Implemented the model into the company's CRM system for real-time predictions.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card card-custom mb-4">
+          <h5>Experience: Internship at Tech Solutions Inc.</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/draw-the-english-capital-letter-yulsys-in-the-form-b7an0XjoSVa6JlQM783pMw-8N5er-HtQHG4Thb73t2M3A.jpeg" alt="Internship Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Role:</strong> Software Engineering Intern</p>
+              <p><strong>Duration:</strong> June 2022 - August 2022</p>
+              <p><strong>Description:</strong> Participated in the development of web applications, working closely with senior developers. Gained hands-on experience in coding, debugging, and testing. Contributed to project meetings and provided innovative solutions to technical challenges.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card card-custom mb-4">
+          <h5>Experience: Freelance Python Developer</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/pexels-knownasovan-62693.jpg" alt="Freelance Work Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Role:</strong> Python Developer</p>
+              <p><strong>Duration:</strong> January 2021 - Present</p>
+              <p><strong>Description:</strong> Worked with various clients to develop custom software solutions, automate workflows, and provide data analysis services. Projects include developing web applications, creating data visualizations, and optimizing algorithms for performance.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="card card-custom mb-4">
-        <h5>Resume</h5>
-        <div class="d-flex">
+      <div id="billingSection" class="content-section">
+        <h4 class="section-heading">Billing & Payments</h4>
+        <p>Manage your billing information and payment methods here:</p>
+        <!-- Add your billing and payments content here -->
 
-          <div>
-            <button type="submit" class="px-3"><span>View Resume</span></button>
+        <div class="card card-custom mb-4">
+          <h5>Billing Information</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/pexels-knownasovan-62693.jpg" alt="Freelance Work Image" class="project-image">
+            </div>
+            <div>
+              <p><strong>Name:</strong> Surya Prasad Sahoo</p>
+              <p><strong>Address:</strong> 123, XYZ, India</p>
+              <p><strong>Email:</strong> suryaprasad9@gmail.com</p>
+              <p><strong>Phone:</strong> 9999999999</p>
+              <p><strong>VAT ID No:</strong> 45689*******56</p>
+            </div>
+            <div class="ml-auto">
+              <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+            </div>
           </div>
-
-          <div class="ml-auto">
-            <input type="file" id="fileInput" style="display:none;">
-            <button type="uploadButton" id="uploadButton" class="px-3"><span><i class="fa-solid fa-upload"></i></span></button>
-          </div>
-
         </div>
+
+        <div class="card card-custom mb-4">
+          <h5>Payment Methods</h5>
+          <div class="d-flex align-items-center">
+            <div class="mr-3 profile">
+              <img src="/assets/payment.jpg" alt="Payment Methods Image" class="payment-image">
+            </div>
+            <div>
+              <p><strong>Credit Card:</strong> **** **** **** 1234</p>
+              <p><strong>Expiry Date:</strong> 12/25</p>
+              <p><strong>Billing Address:</strong> 123, XYZ, India</p>
+            </div>
+            <div class="ml-auto">
+              <button type="button" class="px-3"><span>Add Payment Method</span></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="testSection" class="content-section">
+        <h4 class="section-heading">Take your Test</h4>
+        <p>Take your Test content goes here...</p>
+
+      </div>
+
+      <div id="connectSection" class="content-section">
+        <h4 class="section-heading">Connect With</h4>
+        <p>Connect With content goes here...</p>
+        <!-- Add your connect with content here -->
       </div>
 
     </div>
@@ -89,5 +219,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/src/js/script.js"></script>
+<script src="/src/js/profile.js"></script>
 </body>
 </html>

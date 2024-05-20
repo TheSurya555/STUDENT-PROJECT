@@ -10,12 +10,16 @@
   text-decoration: none;
   font-weight: bold;
 }
-.sidebar a.active {
-  color: #70dcc5;
-}
+
+
 .sidebar a:hover {
   color: #70dcc5;
 }
+
+.content-section { display: none; }
+.content-section.active { display: block; }
+.sidebar a.active { font-weight: bold; color: #70dcc5; }
+
 .main-content {
   padding: 20px;
 }
