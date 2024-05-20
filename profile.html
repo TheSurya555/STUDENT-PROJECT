@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .sidebar {
+      background-color: #f8f9fa;
+      padding: 20px;
+      height: 100vh;
+      border-right: 1px solid #dee2e6;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 0;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .sidebar a.active {
+      color: #28a745;
+    }
+    .sidebar a:hover {
+      color: #28a745;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .main-content .section-heading {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .card-custom {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .card-custom h5 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .edit-icon {
+      color: #28a745;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <h3 class="mb-4">Settings</h3>
+      <a href="#" class="active">My info</a>
+      <a href="#">Billing & Payments</a>
+      <a href="#">Password & Security</a>
+      <a href="#">Membership Benefits</a>
+      <a href="#">Teams</a>
+      <a href="#">Notification Settings</a>
+      <a href="#">Members & Permissions</a>
+      <a href="#">Tax Information</a>
+      <a href="#">Connected Services</a>
+    </div>
+    <div class="col-md-9 main-content">
+      <h4 class="section-heading">My Info</h4>
+      <p>This is a client account</p>
+      
+      <div class="card card-custom mb-4">
+        <h5>Account</h5>
+        <div class="d-flex align-items-center">
+          <div class="mr-3">
+            <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-circle">
+          </div>
+          <div>
+            <p class="mb-0">Surya Sahoo</p>
+            <small>Client Marketplace<br>Surya Prasad Sahoo<br>Email: suryaprasad9@gmail.com</small>
+          </div>
+          <div class="ml-auto">
+            <span class="edit-icon">&#9998;</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card card-custom">
+        <h5>Company details</h5>
+        <div class="d-flex align-items-center">
+          <div class="mr-3">
+            <img src="https://via.placeholder.com/50" alt="Company" class="rounded-circle">
+          </div>
+          <div>
+            <p class="mb-0">Surya Prasad Sahoo</p>
+          </div>
+          <div class="ml-auto">
+            <span class="edit-icon">&#9998;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
