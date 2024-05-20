@@ -5,100 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings Page</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .sidebar {
-      background-color: #f8f9fa;
-      padding: 20px;
-      height: 100vh;
-      border-right: 1px solid #dee2e6;
-    }
-    .sidebar a {
-      display: block;
-      padding: 10px 0;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .sidebar a.active {
-      color: #28a745;
-    }
-    .sidebar a:hover {
-      color: #28a745;
-    }
-    .main-content {
-      padding: 20px;
-    }
-    .main-content .section-heading {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .card-custom {
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-      padding: 20px;
-    }
-    .card-custom h5 {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .edit-icon {
-      color: #28a745;
-      cursor: pointer;
-    }
-  </style>
+  <script src="https://kit.fontawesome.com/ff6ad5e464.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/profile.css">
+  <link rel="stylesheet" href="/src/button.css">
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <div class="col-md-3 sidebar">
-      <h3 class="mb-4">Settings</h3>
+      <h3 class="mb-4">Profile</h3>
       <a href="#" class="active">My info</a>
+      <a href="#">projects / experence</a>
       <a href="#">Billing & Payments</a>
-      <a href="#">Password & Security</a>
-      <a href="#">Membership Benefits</a>
-      <a href="#">Teams</a>
-      <a href="#">Notification Settings</a>
-      <a href="#">Members & Permissions</a>
-      <a href="#">Tax Information</a>
-      <a href="#">Connected Services</a>
+      <a href="#">Take your Test</a>
+      <a href="#">Connect With</a>
     </div>
     <div class="col-md-9 main-content">
       <h4 class="section-heading">My Info</h4>
-      <p>This is a client account</p>
+      <p>Student Account</p>
       
       <div class="card card-custom mb-4">
         <h5>Account</h5>
         <div class="d-flex align-items-center">
-          <div class="mr-3">
-            <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-circle">
+          <div class="mr-3 profile">
+            <img src="/assets/alchemyrefiner_alchemymagic_2_78ad3111-a1a3-4ce8-8f9b-ff5c9b293956_0.jpg" alt="Profile" class="">
           </div>
           <div>
-            <p class="mb-0">Surya Sahoo</p>
-            <small>Client Marketplace<br>Surya Prasad Sahoo<br>Email: suryaprasad9@gmail.com</small>
+            <p class="mb-1 fw-bold">Surya Pasad Sahoo</p>
+            <small>Client Marketplace<br>Email: suryaprasad9@gmail.com</small>
           </div>
           <div class="ml-auto">
-            <span class="edit-icon">&#9998;</span>
+            <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
           </div>
         </div>
       </div>
       
       <div class="card card-custom">
-        <h5>Company details</h5>
+        <h5>Profile details</h5>
         <div class="d-flex align-items-center">
-          <div class="mr-3">
-            <img src="https://via.placeholder.com/50" alt="Company" class="rounded-circle">
+          <div class="mr-3 profile">
+            <img src="/assets/alchemyrefiner_alchemymagic_2_e5784fc4-a8ed-4dfc-ba42-a091b7aa846a_0.jpg" alt="Company" class="">
           </div>
           <div>
             <p class="mb-0">Surya Prasad Sahoo</p>
           </div>
           <div class="ml-auto">
-            <span class="edit-icon">&#9998;</span>
+            <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
           </div>
         </div>
       </div>
