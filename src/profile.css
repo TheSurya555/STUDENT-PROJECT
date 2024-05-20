@@ -1,0 +1,52 @@
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e4e4e4;
+}
+.sidebar a {
+  display: block;
+  padding: 10px 0;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar a.active {
+  color: #70dcc5;
+}
+.sidebar a:hover {
+  color: #70dcc5;
+}
+.main-content {
+  padding: 20px;
+}
+.main-content .section-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.card-custom {
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  padding: 20px;
+}
+.card-custom h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.edit-icon i{
+  color: #70dcc5;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.edit-icon i:hover {
+  color: #378574;
+}
+
+.profile img{
+  width: 50px;
+  height: 50px;
+  object-fit:cover;
+  border-radius: 50%;
+}
