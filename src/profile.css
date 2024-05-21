@@ -66,3 +66,19 @@
   font-weight: normal;
   color: #777777;
 }
+
+
+.balance span{
+  background-color: #70dcc5;
+  opacity: 80%;
+  padding: 5px 25px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.withdraw h5{
+  background-color: #adadad;
+  padding: 5px 25px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
