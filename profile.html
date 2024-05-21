@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings Page</title>
+  <title>Profile</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ff6ad5e464.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/src/style.css">
@@ -70,7 +70,7 @@
           <h5>Resume</h5>
           <div class="d-flex">
             <div>
-              <button type="submit" class="px-3"><span>View Resume</span></button>
+              <button type="submit" class="px-3" data-toggle="modal" data-target="#resumeModal"><span>View Resume</span></button>
             </div>
             <div class="ml-auto">
               <input type="file" id="fileInput" style="display:none;">
@@ -162,37 +162,22 @@
         <!-- Add your billing and payments content here -->
 
         <div class="card card-custom mb-4">
-          <h5>Billing Information</h5>
+          <h3 class="balance mb-5">Balance : <span>10.00$</span> </h3>
           <div class="d-flex align-items-center">
-            <div class="mr-3 profile">
-              <img src="/assets/pexels-knownasovan-62693.jpg" alt="Freelance Work Image" class="project-image">
-            </div>
-            <div>
-              <p><strong>Name:</strong> Surya Prasad Sahoo</p>
-              <p><strong>Address:</strong> 123, XYZ, India</p>
-              <p><strong>Email:</strong> suryaprasad9@gmail.com</p>
-              <p><strong>Phone:</strong> 9999999999</p>
-              <p><strong>VAT ID No:</strong> 45689*******56</p>
-            </div>
-            <div class="ml-auto">
-              <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
+            <div class="withdraw">
+              <button type="button"  class="px-3"><span>Withdraw</span></button>
             </div>
           </div>
         </div>
 
         <div class="card card-custom mb-4">
-          <h5>Payment Methods</h5>
-          <div class="d-flex align-items-center">
-            <div class="mr-3 profile">
-              <img src="/assets/payment.jpg" alt="Payment Methods Image" class="payment-image">
+          <h5 class="mb-4">Payment Methods</h5>
+          <div class="d-flex flex-column">
+            <div class="mb-4">
+              <p>You haven’t set up any billing methods yet. Add a method so you can hire when you’re ready.</p>
             </div>
             <div>
-              <p><strong>Credit Card:</strong> **** **** **** 1234</p>
-              <p><strong>Expiry Date:</strong> 12/25</p>
-              <p><strong>Billing Address:</strong> 123, XYZ, India</p>
-            </div>
-            <div class="ml-auto">
-              <button type="button" class="px-3"><span>Add Payment Method</span></button>
+              <button type="button" class="px-3" data-toggle="modal" data-target="#paymentMethodModal"><span>+ Add Payment Method</span></button>
             </div>
           </div>
         </div>
@@ -205,17 +190,170 @@
 
       </div>
 
+      <!-- Connect With -->
+
       <div id="connectSection" class="content-section">
         <h4 class="section-heading">Connect With</h4>
-        <p>Connect With content goes here...</p>
-        <!-- Add your connect with content here -->
+        <p>Add your social media links here:</p>
+        <div class="card card-custom mb-4">
+          <h5 class="mb-4">Social Media Links</h5>
+          <div id="socialMediaLinksContainer" class="d-flex flex-column mb-4">
+            <p id="noLinksMessage">No social media links added yet. Add your social media links to connect with others.</p>
+          </div>
+          <div>
+            <button type="button" class="px-3" data-toggle="modal" data-target="#socialMediaModal"><span>+ Add Social Media Link</span></button>
+          </div>
+        </div>
       </div>
-
+      
     </div>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Resume Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">Your Resume</h5>
+        <button type="button" class=" px-3" data-dismiss="modal" aria-label="Close">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Assuming the resume is a PDF embedded in the modal -->
+        <embed src="/path/to/your/resume.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="px-3" data-dismiss="modal"><span>Close</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Payment Method Modal -->
+<div class="modal fade" id="paymentMethodModal" tabindex="-1" aria-labelledby="paymentMethodModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentMethodModalLabel">Add Payment Method</h5>
+        <button type="button" class=" px-3" data-dismiss="modal" aria-label="Close">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#debitCardModal" data-dismiss="modal">Add Debit Card</a>
+          <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#onlinePaymentModal" data-dismiss="modal">Online Payment Method</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Debit Card Modal -->
+<div class="modal fade" id="debitCardModal" tabindex="-1" aria-labelledby="debitCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="debitCardModalLabel">Add Debit Card</h5>
+        <button type="button" class=" px-3" data-dismiss="modal" aria-label="Close">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="number" class="form-control" id="cardNumber" placeholder="Enter card number">
+          </div>
+          <div class="form-group">
+            <label for="cardName">Name on Card</label>
+            <input type="text" class="form-control" id="cardName" placeholder="Enter name on card">
+          </div>
+          <div class="form-group">
+            <label for="expiryDate">Expiry Date</label>
+            <input type="date" class="form-control" id="expiryDate" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="CVV">
+          </div>
+          <button type="submit" class="px-3 "><span>Add Card</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Online Payment Modal -->
+<div class="modal fade" id="onlinePaymentModal" tabindex="-1" aria-labelledby="onlinePaymentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="onlinePaymentModalLabel">Online Payment Method</h5>
+        <button type="button" class=" px-3" data-dismiss="modal" aria-label="Close">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="paymentMethod">Select Payment Method</label>
+            <select class="form-control" id="paymentMethod">
+              <option>PayPal</option>
+              <option>Google Pay</option>
+              <option>Apple Pay</option>
+              <option>Stripe</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="paymentId">Payment ID</label>
+            <input type="text" class="form-control" id="paymentId" placeholder="Enter payment ID">
+          </div>
+          <button type="submit" class="px-3"><span>Add Payment Method</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Social Media Modal -->
+<div class="modal fade" id="socialMediaModal" tabindex="-1" aria-labelledby="socialMediaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="socialMediaModalLabel">Add Social Media Link</h5>
+        <button type="button" class=" px-3" data-dismiss="modal" aria-label="Close">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="socialMediaForm">
+          <div class="form-group">
+            <label for="socialMediaPlatform">Select Platform</label>
+            <select class="form-control" id="socialMediaPlatform">
+              <option>GitHub</option>
+              <option>LinkedIn</option>
+              <option>Twitter</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="socialMediaLink">Profile Link</label>
+            <input type="url" class="form-control" id="socialMediaLink" placeholder="Enter your profile link">
+          </div>
+          <button type="submit" class="px-3"><span>Add Link</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/src/js/script.js"></script>
