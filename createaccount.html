@@ -99,7 +99,9 @@
               </form>
             </div>
           </div>
-          <button class="btn btn-primary px-3" onclick="showNextSection('educationSection')"><span>Next</span></button>
+          <div class="mb-5 d-flex justify-content-end">
+            <button class="px-3" onclick="showNextSection('educationSection')"><span>Next</span></button>
+          </div>
         </div>
 
         <div id="educationSection" class="content-section">
@@ -124,10 +126,15 @@
                   <input required="" type="text" name="text" id="graduationYear" autocomplete="off" class="input">
                   <label for="graduationYear" class="user-label">Graduation Year</label>
                 </div>
+                <div>
+                  <button type="submit" class="px-3"><span>Save Education</span></button>
+                </div>
               </form>
             </div>
           </div>
-          <button class="btn btn-primary px-3" onclick="showNextSection('projectExperienceSection')"><span>Next</span></button>
+          <div class="mb-5 d-flex justify-content-end">
+            <button class="px-3" onclick="showNextSection('projectExperienceSection')"><span>Next</span></button>
+          </div>
         </div>
 
         <div id="projectExperienceSection" class="content-section">
@@ -151,8 +158,15 @@
                   <input required="" type="text" name="text" id="role" autocomplete="off" class="input">
                   <label for="role" class="user-label">Role</label>
                 </div>
+                <div>
+                  <button type="submit" class="px-3"><span>Save Project</span></button>
+                </div>
               </form>
             </div>
+          </div>
+          <div class="mb-5 d-flex justify-content-end">
+            <button type="submit" class="px-3"><span>Submit</span></button>
+          </div>
           </div>
         </div>
 

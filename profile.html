@@ -19,6 +19,7 @@
       <a href="#" id="myInfoLink" class="active">My Info</a>
       <a href="#" id="projectsLink">Projects / Experience</a>
       <a href="#" id="billingLink">Billing & Payments</a>
+      <a href="#" id="projectcompleteLink">project completed</a>
       <a href="#" id="testLink">Take your Test</a>
       <a href="#" id="connectLink">Connect With</a>
     </div>
@@ -63,6 +64,9 @@
             <div class="ml-auto">
               <span class="edit-icon"><i class="fa-regular fa-pen-to-square"></i></span>
             </div>
+          </div>
+          <div >
+            <h5 class="balance m-3">Attempts left : <span>3</span> </h5>
           </div>
         </div>
 
@@ -181,14 +185,50 @@
             </div>
           </div>
         </div>
-
       </div>
+      
+      <!-- Project Completed start -->
+      <div id="projectcompleteSection" class="content-section">
+        <h4 class="section-heading">Project Completed</h4>
+        <p>Submit the link to your completed project:</p>
+        
+        <form id="completedProjectForm">
+          <div class="form-group">
+            <label for="projectLink">Project Link</label>
+            <input type="url" class="form-control" id="projectLink" placeholder="Enter your project link" required>
+          </div>
+          <div>
+            <button type="submit" class="px-3"><span>Submit</span></button>
+          </div>
+        </form>
+      </div>
+      <!-- Project Completed end -->
 
+      <!-- test section start -->
       <div id="testSection" class="content-section">
         <h4 class="section-heading">Take your Test</h4>
-        <p>Take your Test content goes here...</p>
-
+        <p>Start your test and submit your answer link below:</p>
+        
+        <!-- Start Test Button -->
+        <div class="card card-custom mb-4">
+          <div class="d-flex align-items-center">
+            <button type="button" class="px-3" id="startTestButton"><span>Start Test</span></button>
+          </div>
+        </div>
+        
+        <!-- Submit Answer Link -->
+        <div class="card card-custom mb-4">
+          <div class="form-group">
+            <label for="answerLink">Submit your answer link:</label>
+            <input type="url" class="form-control" id="answerLink" placeholder="Enter the link to your test answer">
+          </div>
+          <div class="d-flex align-items-center">
+            <button type="button" class="px-3" id="submitAnswerLinkButton"><span>Submit Link</span></button>
+          </div>
+        </div>
       </div>
+      <!-- test section end -->
+
 
       <!-- Connect With -->
 
