@@ -66,11 +66,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// function submitForm(event) {
-//     event.preventDefault(); // Prevent default form submission
-//     // Simulate form submission
-//     // Replace this with actual form submission code (e.g., AJAX)
-//     setTimeout(function() {
-//       document.getElementById('successMessage').style.display = 'block';
-//     }, 1000); // Display success message after 1 second (for demonstration)
-//   }

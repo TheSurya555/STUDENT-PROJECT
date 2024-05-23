@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/button.css">
+    <style>
+        .signup-option {
+            transition: transform 0.3s;
+        }
+        .signup-option:hover {
+            transform: scale(1.05);
+        }
+        .signup-option img {
+            max-width: 100%;
+            height: auto;
+        }
+        .signup-description {
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Join Our Community</h1>
+        <p class="lead">Whether you are looking for a job or seeking the best candidates, we have got you covered. Choose your role and get started today!</p>
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="card signup-option">
+                    <img src="candidate.jpg" class="card-img-top" alt="Candidate Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Sign Up as a Candidate</h2>
+                        <p class="card-text signup-description">Create your profile, upload your resume, and start applying for jobs that match your skills and interests. Join a network of top employers looking for talent like you.</p>
+                        <a href="#" class="button"><button class="px-3"><span>Sign Up as a Candidate</span></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card signup-option">
+                    <img src="recruiter.jpg" class="card-img-top" alt="Recruiter Image">
+                    <div class="card-body">
+                        <h2 class="card-title">Sign Up as a Recruiter</h2>
+                        <p class="card-text signup-description">Post job openings, search for candidates, and manage your recruitment process efficiently. Find the right talent to drive your company's success.</p>
+                        <a href="#" class="button"><button class="px-3"><span>Sign Up as a Recruiter</span></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

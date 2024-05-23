@@ -1,9 +1,25 @@
-      /* Navbar*/
-      /*===========================================================================================*/
-
-      body {
-        padding-top: 96px;
+    /* Navbar*/
+    /*===========================================================================================*/
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+      padding-top: 96px;
     }
+
+    body {
+      font-family: 'Urbanist', sans-serif;
+    }
+  
+    h1 {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 700; /* Bold */
+    }
+  
+    p {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 400; /* Regular */
+    }
+  
+
     header {
       width: 100%;
       height: 100%;
