@@ -18,35 +18,34 @@ $(document).ready(function() {
 });  
   
   
-  $(document).ready(function() {
-    $('.sidebar a').click(function(e) {
-      e.preventDefault();
-      $('.sidebar a').removeClass('active');
-      $(this).addClass('active');
-      $('.content-section').removeClass('active');
-      $('#' + $(this).attr('id').replace('Link', 'Section')).addClass('active');
-    });
-
-    $('#themeToggle').change(function() {
-      if ($(this).val() == 'Dark Mode') {
-        $('body').addClass('dark-mode');
-      } else {
-        $('body').removeClass('dark-mode');
-      }
-    });
-
-    $('#changePasswordForm').on('submit', function(e) {
-      e.preventDefault();
-      let newPassword = $('#newPassword').val();
-      let confirmPassword = $('#confirmPassword').val();
-
-      if (newPassword !== confirmPassword) {
-        $('#confirmPassword').addClass('is-invalid');
-      } else {
-        $('#confirmPassword').removeClass('is-invalid');
-        // Submit form via AJAX or other methods
-        alert('Password changed successfully');
-        $('#changePasswordModal').modal('hide');
-      }
-    });
+$(document).ready(function() {
+  $('.sidebar a').click(function(e) {
+    e.preventDefault();
+    $('.sidebar a').removeClass('active');
+    $(this).addClass('active');
+    $('.content-section').removeClass('active');
+    $('#' + $(this).attr('id').replace('Link', 'Section')).addClass('active');
   });
+
+  $('#themeToggle').change(function() {
+    if ($(this).val() == 'Dark Mode') {
+      $('body').addClass('dark-mode');
+    } else {
+      $('body').removeClass('dark-mode');
+    }
+  });
+  
+  $('#changePasswordForm').on('submit', function(e) {
+    e.preventDefault();
+    let newPassword = $('#newPassword').val();
+    let confirmPassword = $('#confirmPassword').val();
+    if (newPassword !== confirmPassword) {
+      $('#confirmPassword').addClass('is-invalid');
+    } else {
+      $('#confirmPassword').removeClass('is-invalid');
+      // Submit form via AJAX or other methods
+      alert('Password changed successfully');
+      $('#changePasswordModal').modal('hide');
+    }
+  });
+});
